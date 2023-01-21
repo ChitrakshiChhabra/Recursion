@@ -4,11 +4,16 @@ using namespace std;
 
 void display(vector <int> s)
 {
-    for (auto a:s)
-        cout << a <<" ";
+    if(s.size() == 0)
+        cout << "{ }";
+    else
+    {
+        for (auto a:s)
+            cout << a <<" ";
+    }
     cout << endl;
 }
-void subs(vector <int> array, vector<int> s, int index = 0)
+void subs(vector <int> array, vector<int> &s, int index = 0)
 {
     if(index >= array.size())
     {
